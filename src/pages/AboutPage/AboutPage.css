@@ -1,0 +1,195 @@
+/* General styles */
+.about-page {
+    padding: 50px;
+    text-align: center;
+    padding-top: 150px;
+    color: #333;
+  }
+  
+  .about-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    color: red;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+  
+  .about-left img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .about-right {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 20px;
+  }
+  
+  /* Education and Experience Cards */
+  .about-cards-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    flex-wrap: wrap;
+  }
+  
+  .about-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .about-card h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .sub-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sub-card {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #eaeaea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInCard 1.5s ease-in-out;
+  }
+  
+  .sub-card h1 {
+    font-size: 1.5rem;
+    color: #3498db;
+  }
+  
+  .sub-card h2 {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .sub-card p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Achievements Section */
+  .about-achievements {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .about-achievement {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+  
+  .about-achievement h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: yellowgreen;
+  }
+  
+  .about-achievement p {
+    font-size: 1.2rem;
+    color: red;
+  }
+  
+  /* Explore button */
+  .explore-section {
+    margin-top: 40px;
+  }
+  
+  .explore-btn {
+    background-color:red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    transition: transform 0.3s ease;
+  }
+  
+  .explore-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInCard {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+    }
+  
+    .about-right {
+      margin: 20px 0;
+      max-width: 100%;
+    }
+  
+    .about-cards-section {
+      flex-direction: column;
+    }
+  
+    .about-card {
+      width: 100%;
+    }
+  
+    .about-achievements {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-title h1 {
+      font-size: 2rem;
+    }
+  
+    .about-achievement h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-achievement p {
+      font-size: 1rem;
+      }  }
+  

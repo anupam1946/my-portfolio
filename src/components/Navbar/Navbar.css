@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Glass Morphism Navbar */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo h1 {
+    font-size: 2.5rem;
+    color: red;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links ul li {
+    display: inline-block;
+  }
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #ae8d37;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: black;
+    bottom: 0;
+    left: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect for desktop */
+  .nav-links ul li a:hover::after,
+  .nav-links ul li a:focus::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .nav-links ul li a:hover,
+  .nav-links ul li a:focus {
+    color: #21907f;
+  }
+  
+  /* Active state for touch devices */
+  .nav-links ul li a:active::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .nav-links ul li a:active {
+    color: #21907f;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      width: 50%;
+      height: calc(100vh - 70px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .nav-links.open {
+      transform: translateX(0);
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
