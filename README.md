@@ -3,7 +3,7 @@
 Welcome to my portfolio! This project showcases my skills and projects.
 
 ## Live Demo
-[View the live demo here](https://username.github.io/repository-name)
+[View the live demo here](https://github.com/anupam1946/my-portfolio/)
 
 ## Installation
 To run this project locally, follow these steps:
